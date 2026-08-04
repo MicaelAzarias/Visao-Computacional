@@ -1,1 +1,1 @@
-# Vis-o-Computacional
+# Visão-Computacional
