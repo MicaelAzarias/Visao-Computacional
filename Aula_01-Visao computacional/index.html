@@ -1,20 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Biblioteca OpemCV.js , via CDN-->
-    <script async src="https;//docs.opencv.org/4.x/opencv.js"></script>
+    <script src="https://docs.opencv.org/4.x/opencv.js"></script>
     <title>Aula 01 | Visão Computacional</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <input type="file" id="image_file" accept="imagem/+">
-    <button id="btn_converter">Converter para Cinza</button>
-    <canvas id="original"></canvas>
-    <canvas id="saida"></canvas>
-    <script src="javascript/script.js"></script>
+    <header class="fiap-header">
+        <div class="fiap-header__brand">
+            <span class="fiap-header__logo">FIAP</span>
+            <span class="fiap-header__divider"></span>
+            <span class="fiap-header__title">Visão Computacional Aplicada</span>
+        </div>
+        <span class="fiap-header__tag">Aula 01</span>
+    </header>
+    <main class="container">
+        <section class="intro">
+            <div class="badge_row">
+                <span class="badge">cv.imread</span>
+                <span class="badge">cv.imshow</span>
+                <span class="badge">cv.cvtColor</span>
+            </div>
+            <h1>Introdução à Visão Computacional - Preparando o ambiente</h1>
+            <p> Primeiro contato com OpenCV.js: carregar a imagem no navegador, exibi-la no Canvas e converter para
+                escala de sinza</p>
+        </section>
+        <section class="stage-panel">
+            <h2>Carregue uma imagem e converta para cinza</h2>
+            <div class="upload-row">
+                <input type="file" id="inputImage" accept="imagem/+">
+                <span class="hint">Dica: use a imagem de exemplo em<code>img/flor.jpg</code>ou uma foto sua.</span>
+            </div>
+            <div class="canvas-grid">
+                <div class="canvas-card">
+                    <h3>Original</h3>
+                    <canvas c id="canvasOriginal"></canvas>
+                </div>
+                <div class="canvas-card">
+                    <h3>Escala de Cinza</h3>
+                    <canvas id="canvasSaida"></canvas>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="btnCinza" class="btn btn--primary" disabled>Converter para Cinza</button>
+            </div>
+            <p id="status" class="status"> Carregando OpenCV.js...</p>
+        </section>
+
+        <script src="javascript/script.js" defer></script>
+    </main>
+    <footer class="fiap-footer">
+        <p>Material didático - aula 01 de Visão Computacional Aplicada | FIAP 2026</p>
+    </footer>
 </body>
 
 </html>
